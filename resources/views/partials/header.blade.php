@@ -6,7 +6,6 @@
                 <li><a href="/" class="hover:text-blue-200">Home</a></li>
                 <li><a href="/categories" class="hover:text-blue-200">Categories</a></li>
                 <li><a href="/products" class="hover:text-blue-200">Products</a></li>
-                <li><a href="/login" class="hover:text-blue-200">Login</a></li>
             </ul>
         </nav>
     </div>
