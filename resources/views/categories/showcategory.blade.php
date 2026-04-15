@@ -30,7 +30,7 @@
 
     </div>
 
-    <div class="bg-white dark:bg-[#18181c] rounded-xl border border-gray-200 dark:border-white/10 overflow-hidden">
+    <div class="bg-white dark:bg-[#18181c] rounded-sm border border-gray-200 dark:border-white/10 overflow-hidden">
 
         @if($category->products->count() > 0)
 
@@ -104,16 +104,13 @@
                 <p class="text-indigo-500 font-semibold" x-text="'$' + product?.price"></p>
             </div>
 
-            <!-- ACTIONS -->
             <div class="flex justify-end gap-3 pt-4 border-t border-gray-200 dark:border-white/10">
 
-                <!-- EDIT -->
                 <a :href="`/products/${product?.id}/edit`"
                     class="px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-white rounded-md text-sm font-medium transition">
                     Edit
                 </a>
 
-                <!-- DELETE -->
                 <form :action="`/products/${product?.id}`" method="POST"
                     onsubmit="return confirm('Delete this product?')">
 
@@ -121,7 +118,7 @@
                     @method('DELETE')
 
                     <button type="submit"
-                        class="px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-md text-sm font-medium transition">
+                        class="px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-md text-sm font-medium transition hover:cursor-pointer">
                         Delete
                     </button>
 
