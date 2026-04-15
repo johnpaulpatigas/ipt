@@ -25,7 +25,7 @@
         }
     }">
 
-    <div class="flex justify-between items-center mb-6">
+    <div class="flex justify-between items-center mb-10">
         <h2 class="text-3xl font-bold text-black dark:text-white">
             Products
         </h2>
@@ -36,7 +36,7 @@
         </a>
     </div>
 
-    <div class="mb-4 flex gap-3">
+    <div class="mb-10 flex gap-3">
 
         <input type="text"
             x-model="search"

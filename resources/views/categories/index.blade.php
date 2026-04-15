@@ -39,7 +39,7 @@
         }
     }">
 
-    <div class="flex justify-between items-center mb-6">
+    <div class="flex justify-between items-center mb-10">
         <h2 class="text-3xl font-bold text-black dark:text-white">
             Categories
         </h2>
@@ -50,7 +50,7 @@
         </a>
     </div>
 
-    <div class="mb-4 flex gap-3">
+    <div class="mb-10 flex gap-3">
 
         <input type="text"
             x-model="search"
@@ -112,13 +112,15 @@
 
                             <form :action="`/categories/${c.id}`" method="POST"
                                 class="inline-block"
-                                @submit.stop="return confirm('Are you sure you want to delete this category?')">
+                                @click.stop
+                                @submit.prevent="if(confirm('Are you sure you want to delete this category?')) $el.submit()">
 
                                 @csrf
                                 @method('DELETE')
 
                                 <button type="submit"
-                                    class="text-red-500 hover:underline">
+                                    class="text-red-500 hover:underline hover:cursor-pointer"
+                                    @click.stop>
                                     Delete
                                 </button>
 
